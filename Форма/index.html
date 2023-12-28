@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body class="page">
+  <div class="container">
+    <form class="form" name="register">
+      <h3 class="form__title">Регистрация</h3>
+      <input
+        class="form__input"
+        name="name"
+        placeholder="Имя"
+        type="text"
+        pattern="[A-Za-zА-Яа-яЁё]{3,30}"
+        required
+      >
+      <input
+        class="form__input"
+        name="tel"
+        placeholder="Телефон"
+        type="tel"
+        pattern="^(\+)?[0-9]{10,15}"
+        required
+      >
+    
+      <input
+        class="form__input"
+        id="password"
+        name="password"
+        placeholder="Пароль"
+        type="password"
+        pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,40}$"
+        required
+      >
+      <input
+        class="form__input"
+        id="confirmPassword"
+        name="confirmPassword"
+        placeholder="Повторите пароль"
+        type="password"
+        pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,40}$"
+        required
+      >
+      <button class="form__save-button" type="submit">Зарегистрироваться</button>
+    </form>
+  </div>
+</body>
+</html>
